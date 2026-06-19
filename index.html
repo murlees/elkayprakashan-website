@@ -378,6 +378,41 @@ textarea.inp{min-height:110px;resize:vertical;}
 .tcard.feat-t{border-color:rgba(184,134,47,.45);background:linear-gradient(160deg,var(--brass-pale),var(--paper) 55%);}
 .testi-cta{text-align:center;margin-top:34px;}
 
+/* ============ TESTIMONIALS ============ */
+.tgrid{column-count:3;column-gap:18px;margin-top:38px;}
+@media(max-width:880px){.tgrid{column-count:2;}}
+@media(max-width:560px){.tgrid{column-count:1;}}
+.tcard{break-inside:avoid;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);
+  padding:22px 22px;margin-bottom:18px;box-shadow:var(--shadow-sm);transition:box-shadow .2s,transform .15s,border-color .2s;position:relative;}
+.tcard:hover{box-shadow:var(--shadow-lg);transform:translateY(-3px);border-color:rgba(184,134,47,.4);}
+.tstars{color:var(--brass);font-size:14px;letter-spacing:2px;margin-bottom:10px;}
+.tquote{font-size:14px;color:var(--ink-2);line-height:1.7;font-style:italic;}
+.tquote::before{content:"\201C";font-family:'Fraunces',serif;font-size:30px;color:var(--brass-light);line-height:0;vertical-align:-12px;margin-right:2px;}
+.tauthor{margin-top:14px;padding-top:13px;border-top:1px solid var(--line-soft);}
+.tname{font-family:'Fraunces',serif;font-weight:600;font-size:14.5px;color:var(--indigo);}
+.trole{font-size:12px;color:var(--brass);font-weight:500;margin-top:1px;}
+.tcta{background:linear-gradient(135deg,var(--brass-pale),var(--ivory-2));border:1px solid rgba(184,134,47,.3);
+  border-radius:var(--r-lg);padding:30px 26px;text-align:center;max-width:620px;margin:42px auto 0;}
+.tcta h3{font-family:'Fraunces',serif;font-weight:600;font-size:21px;color:var(--indigo);}
+.tcta p{font-size:14px;color:var(--ink-soft);margin:8px auto 18px;max-width:440px;line-height:1.6;}
+
+/* ============ JOIN COMMUNITY (Google Form) ============ */
+.join{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(1.5rem,4vw,3rem);align-items:center;
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:clamp(1.75rem,4vw,3rem);box-shadow:var(--shadow);max-width:920px;margin:0 auto;}
+@media(max-width:720px){.join{grid-template-columns:1fr;text-align:center;}}
+.join h3{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(22px,3vw,30px);color:var(--indigo);line-height:1.15;}
+.join p{font-size:14.5px;color:var(--ink-2);line-height:1.7;margin-top:12px;}
+.join-feats{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 22px;}
+@media(max-width:720px){.join-feats{justify-content:center;}}
+.join-feats .chip{background:var(--brass-pale);border-color:rgba(184,134,47,.3);color:#8a6420;}
+.join-btns{display:flex;flex-wrap:wrap;gap:12px;}
+@media(max-width:720px){.join-btns{justify-content:center;}}
+.qr-box{justify-self:center;background:var(--ivory-2);border:1px solid var(--line);border-radius:var(--r);
+  padding:18px;text-align:center;box-shadow:var(--shadow-sm);}
+.qr-box img{width:180px;height:180px;border-radius:10px;background:#fff;padding:8px;border:1px solid var(--line);}
+.qr-box .cap{font-size:12px;color:var(--ink-soft);margin-top:10px;letter-spacing:.3px;}
+.qr-box .cap b{color:var(--indigo);}
 </style>
 
 <body>
@@ -395,6 +430,7 @@ textarea.inp{min-height:110px;resize:vertical;}
     <div class="nav-link" onclick="go('about',this)">About</div>
     <div class="nav-link" onclick="go('books',this)">Books &amp; Services</div>
     <div class="nav-link" onclick="go('blog',this)">Writing</div>
+    <div class="nav-link" onclick="go('reviews',this)">Reviews</div>
     <div class="nav-link" onclick="go('schools',this)">For Schools</div>
     <div class="nav-link nav-cta" onclick="go('contact',this)">Contact</div>
   </div>
@@ -406,8 +442,8 @@ textarea.inp{min-height:110px;resize:vertical;}
     <div class="hero-grid">
       <div class="hero-copy">
         <span class="hero-eyebrow">✦ MSME &amp; GST Registered · Est. 2026</span>
-        <h1>Tamil stories that<br><em>grow with</em> a child.</h1>
-        <p class="hero-tag">Elkay Prakashan publishes children's books <b>rooted in Indian culture</b> — and nurtures the young readers who will carry it forward.</p>
+        <h1>Rooted in culture,<br><em>writing for</em> tomorrow's India.</h1>
+        <p class="hero-tag">Elkay Prakashan publishes Tamil children's books that <b>grow with a child</b> — and nurtures the young readers who will carry our culture forward.</p>
         <div class="hero-meta">
           <span class="hero-chip"><b>15</b> books published</span>
           <span class="hero-chip"><b>2</b> national records</span>
@@ -478,74 +514,64 @@ textarea.inp{min-height:110px;resize:vertical;}
     </div>
   </section>
 
+  <section class="band">
+    <div class="wrap">
+      <div class="center" style="margin-bottom:34px">
+        <span class="eyebrow">Stay Connected</span>
+        <h2 class="h-title">Join our reader community</h2>
+        <p class="lead">Register once to hear about reading circles, storytelling sessions, school programmes, exhibitions and new books.</p>
+      </div>
+      <div class="join">
+        <div>
+          <h3>Be part of the Elkay Prakashan family</h3>
+          <p>Whether you're a parent, teacher, librarian or fellow book-lover, register your interest and we'll keep you posted on everything happening at Elkay Prakashan.</p>
+          <div class="join-feats">
+            <span class="chip">Reading Circles</span>
+            <span class="chip">Storytelling</span>
+            <span class="chip">School Programmes</span>
+            <span class="chip">Author Interactions</span>
+            <span class="chip">Publishing Services</span>
+          </div>
+          <div class="join-btns">
+            <button class="btn btn-gold" onclick="joinForm()">📝 Register your interest</button>
+            <button class="btn btn-ghost" onclick="go('contact')">Or contact us</button>
+          </div>
+        </div>
+        <div class="qr-box">
+          <img src="data:image/png;base64,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" alt="Scan to register with Elkay Prakashan">
+          <div class="cap">Scan to register<br><b>or tap the button</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  
 
   <section class="band">
     <div class="wrap center">
       <span class="eyebrow">What Readers Say</span>
-      <h2 class="h-title">Loved by readers, educators &amp; reviewers</h2>
-      <p class="lead">Reviews of <em>Bharathamum Pandigaigalum</em> and <em>Pazhamozhigalai Pazhaguvom</em> (our Proverbs book).</p>
-      <div class="tgrid">
-
-        <div class="tcard feat-t">
-          <div class="quote-mark">&rdquo;</div>
-          <div class="stars">★★★★★</div>
-          <p>Both Bharathamum Pandigaigalum and Pazhamozhigalai Pazhaguvom have come out exceptionally well — informative, engaging and thoughtfully presented. The Proverbs book in particular is captivating, with beautiful illustrations and excellent production quality. A must-have for children of all ages.</p>
-          <div class="who"><span class="nm">Anuradha Jaishankar</span><span class="rl">Special Educator, Author &amp; Book Reviewer</span></div>
+      <h2 class="h-title">Trusted by educators &amp; parents</h2>
+      <p class="lead">Reviews from special educators, school libraries and readers across Tamil Nadu.</p>
+      <div class="grid c3" style="text-align:left;margin-top:34px">
+        <div class="tcard" style="margin:0">
+          <div class="tstars">★★★★★</div>
+          <div class="tquote">The content is informative, engaging, and thoughtfully presented... A must-have for children of all ages.</div>
+          <div class="tauthor"><div class="tname">Anuradha Jaishankar</div><div class="trole">Special Educator &amp; Book Reviewer</div></div>
         </div>
-
-        <div class="tcard">
-          <div class="quote-mark">&rdquo;</div>
-          <div class="stars">★★★★★</div>
-          <p>The Proverbs book combines beautiful illustrations with relatable stories. I would love to have multiple copies of both books in our school library for children to enjoy during reading sessions.</p>
-          <div class="who"><span class="nm">T. K. Shanthamma</span><span class="rl">Educational Director, DAV School, Adambakkam</span></div>
+        <div class="tcard" style="margin:0">
+          <div class="tstars">★★★★★</div>
+          <div class="tquote">I would love to have multiple copies of both books in our school library for children to enjoy during reading sessions.</div>
+          <div class="tauthor"><div class="tname">T. K. Shanthamma</div><div class="trole">Educational Director, DAV School</div></div>
         </div>
-
-        <div class="tcard">
-          <div class="quote-mark">&rdquo;</div>
-          <div class="stars">★★★★★</div>
-          <p>Each festival is presented through engaging stories that help children understand why traditions and celebrations matter. Highly recommended for young readers.</p>
-          <div class="who"><span class="nm">Meenakshi Devaraj</span><span class="rl">Historian</span></div>
+        <div class="tcard" style="margin:0">
+          <div class="tstars">★★★★★</div>
+          <div class="tquote">Each festival is presented through engaging stories that help children understand why traditions matter.</div>
+          <div class="tauthor"><div class="tname">Meenakshi Devaraj</div><div class="trole">Historian</div></div>
         </div>
-
-        <div class="tcard">
-          <div class="quote-mark">&rdquo;</div>
-          <div class="stars">★★★★★</div>
-          <p>The language is simple, accessible and child-friendly. I enjoyed reading the stories to my children. Congratulations on creating such a meaningful book.</p>
-          <div class="who"><span class="nm">B. Thangarathinam</span><span class="rl">Culture &amp; Books Enthusiast</span></div>
-        </div>
-
-        <div class="tcard">
-          <div class="quote-mark">&rdquo;</div>
-          <div class="stars">★★★★★</div>
-          <p>I purchased the book after reading Anuradha Jaishankar's review and thoroughly enjoyed it. A valuable resource that I would happily recommend to school-going children of all age groups.</p>
-          <div class="who"><span class="nm">N. R. Sampath</span><span class="rl">Book Enthusiast</span></div>
-        </div>
-
-        <div class="tcard">
-          <div class="quote-mark">&rdquo;</div>
-          <div class="stars">★★★★★</div>
-          <p>We highly recommend Bharathamum Pandigaigalum for children of all ages. It deserves a place in every library.</p>
-          <div class="who"><span class="nm">Vidhyavaani Magazine</span><span class="rl">Literary Review</span></div>
-        </div>
-
-        <div class="tcard">
-          <div class="quote-mark">&rdquo;</div>
-          <div class="stars">★★★★★</div>
-          <p>A beautifully crafted book that reflects both passion and purpose. I am delighted to see such meaningful work reaching young readers, and I wish the author continued success and recognition in the literary world.</p>
-          <div class="who"><span class="nm">Suryagayathri Sudharshan</span><span class="rl">Harikatha Exponent &amp; Carnatic Vocalist</span></div>
-        </div>
-
-        <div class="tcard">
-          <div class="quote-mark">&rdquo;</div>
-          <div class="stars">★★★★★</div>
-          <p>Thank you for these wonderful books. My wife and daughter thoroughly enjoyed reading them. We look forward to seeing many more titles from Elkay Prakashan in the future.</p>
-          <div class="who"><span class="nm">B. Karthik</span><span class="rl">IT Professional</span></div>
-        </div>
-
       </div>
-      <div class="testi-cta">
-        <button class="btn btn-wa" onclick="waReview()">★ Share your experience</button>
-      </div>
+      <div style="margin-top:30px"><button class="btn btn-ghost" onclick="go('reviews')">Read all reviews</button></div>
     </div>
   </section>
 
@@ -707,6 +733,79 @@ textarea.inp{min-height:110px;resize:vertical;}
   </section>
 </div>
 
+<!-- ================= REVIEWS / TESTIMONIALS ================= -->
+<div id="page-reviews" class="page">
+  <div class="phead">
+    <span class="eyebrow">What Readers Say</span>
+    <h1>Reviews &amp; Testimonials</h1>
+    <p>From educators, reviewers, parents and readers</p>
+  </div>
+  <section class="wrap">
+    <div class="center" style="margin-bottom:8px">
+      <span class="eyebrow">In Their Words</span>
+      <h2 class="h-title">Loved by readers of all ages</h2>
+      <p class="lead">Reviews for <em>Bharathamum Pandigaigalum</em> and <em>Pazhamozhigalai Pazhaguvom</em> — from special educators to school libraries.</p>
+    </div>
+    <div class="tgrid">
+
+      <div class="tcard">
+        <div class="tstars">★★★★★</div>
+        <div class="tquote">Both Bharathamum Pandigaigalum and Pazhamozhigalai Pazhaguvom have come out exceptionally well. The content is informative, engaging, and thoughtfully presented. The Proverbs book, in particular, is captivating, with beautiful illustrations and excellent production quality. A must-have for children of all ages.</div>
+        <div class="tauthor"><div class="tname">Anuradha Jaishankar</div><div class="trole">Special Educator, Author &amp; Book Reviewer</div></div>
+      </div>
+
+      <div class="tcard">
+        <div class="tstars">★★★★★</div>
+        <div class="tquote">The Proverbs book combines beautiful illustrations with relatable stories. I would love to have multiple copies of both books in our school library for children to enjoy during reading sessions.</div>
+        <div class="tauthor"><div class="tname">T. K. Shanthamma</div><div class="trole">Educational Director, DAV School, Adambakkam</div></div>
+      </div>
+
+      <div class="tcard">
+        <div class="tstars">★★★★★</div>
+        <div class="tquote">Each festival is presented through engaging stories that help children understand why traditions and celebrations matter. Highly recommended for young readers.</div>
+        <div class="tauthor"><div class="tname">Meenakshi Devaraj</div><div class="trole">Historian</div></div>
+      </div>
+
+      <div class="tcard">
+        <div class="tstars">★★★★★</div>
+        <div class="tquote">I purchased the book after reading Anuradha Jaishankar's review and thoroughly enjoyed it. It is a valuable resource that I would happily recommend to school-going children of all age groups.</div>
+        <div class="tauthor"><div class="tname">N. R. Sampath</div><div class="trole">Book Enthusiast</div></div>
+      </div>
+
+      <div class="tcard">
+        <div class="tstars">★★★★★</div>
+        <div class="tquote">The language is simple, accessible, and child-friendly. I enjoyed reading the stories to my children. Congratulations on creating such a meaningful book.</div>
+        <div class="tauthor"><div class="tname">B. Thangarathinam</div><div class="trole">Culture &amp; Books Enthusiast</div></div>
+      </div>
+
+      <div class="tcard">
+        <div class="tstars">★★★★★</div>
+        <div class="tquote">A beautifully crafted book that reflects both passion and purpose. I am delighted to see such meaningful work reaching young readers. I look forward to seeing many more books from the author and wish her continued success and recognition in the literary world.</div>
+        <div class="tauthor"><div class="tname">Suryagayathri Sudharshan</div><div class="trole">Harikatha Exponent &amp; Carnatic Vocalist</div></div>
+      </div>
+
+      <div class="tcard">
+        <div class="tstars">★★★★★</div>
+        <div class="tquote">We highly recommend Bharathamum Pandigaigalum for children of all ages. It deserves a place in every library.</div>
+        <div class="tauthor"><div class="tname">Vidhyavaani Magazine</div><div class="trole">Publication Review</div></div>
+      </div>
+
+      <div class="tcard">
+        <div class="tstars">★★★★★</div>
+        <div class="tquote">Thank you for these wonderful books. My wife and daughter thoroughly enjoyed reading them. We look forward to seeing many more titles from Elkay Prakashan in the future.</div>
+        <div class="tauthor"><div class="tname">B. Karthik</div><div class="trole">IT Professional</div></div>
+      </div>
+
+    </div>
+
+    <div class="tcta">
+      <h3>Read one of our books?</h3>
+      <p>We'd love to hear what you thought. Share a few lines and we may feature your words here.</p>
+      <button class="btn btn-wa" onclick="waReview()">✍️ Share your review on WhatsApp</button>
+    </div>
+  </section>
+</div>
+
 <!-- ================= FOR SCHOOLS ================= -->
 <div id="page-schools" class="page">
   <div class="phead">
@@ -796,7 +895,7 @@ textarea.inp{min-height:110px;resize:vertical;}
   <div class="footer-motto">तमसो मा ज्योतिर्गमय · Lead to Knowledge</div>
   <div class="footer-links">
     <span onclick="go('home')">Home</span><span onclick="go('about')">About</span>
-    <span onclick="go('books')">Books &amp; Services</span><span onclick="go('blog')">Writing</span>
+    <span onclick="go('books')">Books &amp; Services</span><span onclick="go('blog')">Writing</span><span onclick="go('reviews')">Reviews</span>
     <span onclick="go('schools')">For Schools</span><span onclick="go('contact')">Contact</span>
   </div>
   <div class="footer-sep"></div>
@@ -808,7 +907,7 @@ function go(id,el){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.querySelectorAll('.nav-link').forEach(l=>l.classList.remove('active'));
   var pg=document.getElementById('page-'+id); if(pg) pg.classList.add('active');
-  var map={home:0,about:1,books:2,blog:3,schools:4,contact:5};
+  var map={home:0,about:1,books:2,blog:3,reviews:4,schools:5,contact:6};
   var links=document.querySelectorAll('#navlinks .nav-link');
   if(el && el.classList.contains('nav-link')) el.classList.add('active');
   else if(map[id]!==undefined) links[map[id]].classList.add('active');
@@ -818,6 +917,17 @@ function go(id,el){
 function toggleMenu(){document.getElementById('navlinks').classList.toggle('open');}
 function ext(u){window.open(u,'_blank','noopener');}
 function waBook(t){window.open('https://wa.me/919884352767?text='+encodeURIComponent('Hi, I am interested in the book "'+t+'". Please share details.'),'_blank','noopener');}
+function joinForm(){
+  var url='https://forms.gle/REPLACE-WITH-YOUR-FORM-LINK';
+  if(url.indexOf('REPLACE')>-1){alert('Our registration form is being set up — please reach us on WhatsApp or the Contact page for now.');return;}
+  window.open(url,'_blank','noopener');
+}
+function waReview(){window.open('https://wa.me/919884352767?text='+encodeURIComponent('Hi! I would like to share a review of a book from Elkay Prakashan:\n\nBook: \nMy review: \nName & role (for crediting): '),'_blank','noopener');}
+function joinForm(){
+  var url='https://forms.gle/REPLACE-WITH-YOUR-FORM-LINK';
+  if(url.indexOf('REPLACE')>-1){alert('Our registration form is being set up — please reach us on WhatsApp or the Contact page for now.');return;}
+  window.open(url,'_blank','noopener');
+}
 function waReview(){window.open('https://wa.me/919884352767?text='+encodeURIComponent('Hi, I would like to share my experience / a testimonial about an Elkay Prakashan book:'),'_blank','noopener');}
 function prep(form,label){
   var k=form.querySelector('[name=access_key]').value;
